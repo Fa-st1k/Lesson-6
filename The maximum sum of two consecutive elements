@@ -1,0 +1,17 @@
+python 
+import random 
+ 
+# Генерируем список из 20 случайных целочисленных элементов 
+numbers = [random.randint(-100, 100) for _ in range(20)] 
+ 
+# Инициализируем переменную для хранения максимальной суммы 
+max_sum = float('-inf') 
+ 
+# Проходимся по списку и находим максимальную сумму двух подряд идущих элементов 
+for i in range(len(numbers) - 1): 
+    current_sum = numbers[i] + numbers[i + 1] 
+    if current_sum > max_sum: 
+        max_sum = current_sum 
+ 
+# Выводим результат 
+print("Максимальная сумма двух подряд идущих элементов:", max_sum) 
